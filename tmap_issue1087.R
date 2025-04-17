@@ -16,6 +16,8 @@ terra::writeRaster(p.kde,'./p.kde.tif')
 
 library(tmap)
 
+p.kde = terra::rast('./p.kde.tif')
+
 fig1 = tm_shape(p.kde) +
   #tm_basemap(server = "CartoDB.PositronNoLabels", zoom = 10, alpha = 0.5) +
   tm_raster(col.scale = tm_scale_continuous(values = c("#9fb4cf",
